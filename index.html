@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#090b12">
+  <title>PugbMini — Tải Game</title>
+  <meta name="description" content="Tải PugbMini phiên bản mới nhất trực tiếp từ GitHub Releases.">
+  <style>
+    *{box-sizing:border-box} :root{--bg:#090b12;--panel:#111522;--muted:#9ba4b8;--accent:#9d6bff;--accent2:#6434d6;--line:#252b3c}
+    body{margin:0;color:#f3f4fa;background:radial-gradient(ellipse at 50% 0%,#21183c 0%,#10121d 38%,var(--bg) 72%);font-family:Inter,Segoe UI,Arial,sans-serif;min-height:100vh}
+    a{color:inherit;text-decoration:none}.wrap{width:min(1080px,92%);margin:auto}
+    header{display:flex;align-items:center;justify-content:space-between;padding:24px 0;border-bottom:1px solid #ffffff12}
+    .brand{display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.4px}.logo{width:42px;height:42px;border-radius:13px;background:linear-gradient(145deg,#bd98ff,#6e3dd6);display:grid;place-items:center;box-shadow:0 0 25px #9867ff55;font-size:19px}
+    .nav{font-size:14px;color:#b8bfd0}.nav a:hover{color:#fff}
+    main{padding:72px 0 40px}.hero{text-align:center;max-width:780px;margin:auto}.eyebrow{display:inline-block;border:1px solid #9d6bff55;background:#9d6bff12;border-radius:99px;padding:8px 13px;color:#c7aaff;font-size:12px;letter-spacing:1.8px;text-transform:uppercase}
+    h1{font-size:clamp(42px,8vw,82px);line-height:.98;margin:23px 0 18px;letter-spacing:-3px}.gradient{background:linear-gradient(90deg,#fff,#c7a6ff 60%,#9b68ff);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .intro{color:var(--muted);font-size:17px;line-height:1.7;max-width:590px;margin:0 auto}
+    .download-panel{margin:38px auto 0;max-width:620px;border:1px solid #ffffff18;border-radius:22px;background:linear-gradient(150deg,#171b2b,#10131d);padding:25px;box-shadow:0 24px 80px #0006}
+    .release-row{display:flex;justify-content:space-between;align-items:center;gap:12px;text-align:left;margin-bottom:20px}.version{font-size:20px;font-weight:750}.release-info{font-size:13px;color:var(--muted);margin-top:5px}.tag{font-size:12px;color:#c6a9ff;border:1px solid #9d6bff55;background:#9d6bff12;border-radius:99px;padding:6px 10px;white-space:nowrap}
+    .download-btn{display:flex;align-items:center;justify-content:center;gap:10px;background:linear-gradient(100deg,#9b66ff,#7040db);border-radius:13px;padding:17px 20px;font-size:16px;font-weight:800;letter-spacing:.6px;box-shadow:0 8px 28px #8c58ff30;transition:.18s transform,.18s filter}.download-btn:hover{transform:translateY(-2px);filter:brightness(1.12)}.download-btn:active{transform:translateY(0)}
+    #assets{display:grid;gap:10px;margin-top:12px}.asset{padding:13px 15px;border:1px solid var(--line);background:#0b0e17;border-radius:12px;display:flex;justify-content:space-between;gap:12px;align-items:center;text-align:left}.asset:hover{border-color:#9d6bff88}.asset-name{font-size:14px;overflow-wrap:anywhere}.asset-size{color:var(--muted);font-size:12px;white-space:nowrap}.status{color:var(--muted);font-size:13px;margin:15px 0 0;min-height:18px}
+    .features{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin:62px 0 0}.feature{border:1px solid var(--line);background:#ffffff05;border-radius:16px;padding:20px}.feature-icon{font-size:21px}.feature h3{margin:13px 0 8px;font-size:15px}.feature p{margin:0;color:var(--muted);font-size:13px;line-height:1.65}
+    .install{margin:48px 0 0;padding:26px;border:1px solid var(--line);border-radius:18px;background:#ffffff04}.install h2{margin:0 0 18px;font-size:21px}.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{color:var(--muted);font-size:14px;line-height:1.65}.step strong{display:block;color:#f1f2f7;margin-bottom:5px}
+    footer{border-top:1px solid #ffffff12;margin-top:55px;padding:22px 0;color:#788196;font-size:12px;display:flex;justify-content:space-between;gap:12px;flex-wrap:wrap}
+    @media(max-width:650px){main{padding-top:48px}.features,.steps{grid-template-columns:1fr}.download-panel{padding:18px}.intro{font-size:15px}.features{margin-top:40px}.install{padding:20px}h1{letter-spacing:-1.5px}}
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="brand"><div class="logo">P</div><span>PugbMini</span></div>
+      <div class="nav"><a href="https://github.com/MilysJkai/PugbMini/releases" target="_blank" rel="noopener">GitHub Releases ↗</a></div>
+    </header>
+    <main>
+      <section class="hero">
+        <div class="eyebrow">Game download · Windows</div>
+        <h1>Enter the game.<br><span class="gradient">Play PugbMini.</span></h1>
+        <p class="intro">Tải phiên bản PugbMini mới nhất tại đây. File tải được lấy trực tiếp từ GitHub Releases của dự án.</p>
+        <div class="download-panel">
+          <div class="release-row">
+            <div><div class="version" id="version">Đang kiểm tra phiên bản…</div><div class="release-info" id="releaseInfo">Tải trực tiếp từ GitHub</div></div>
+            <span class="tag">LATEST RELEASE</span>
+          </div>
+          <a class="download-btn" id="mainDownload" href="https://github.com/MilysJkai/PugbMini/releases/latest" target="_blank" rel="noopener">⬇ &nbsp; TẢI GAME</a>
+          <div id="assets"></div>
+          <p class="status" id="status">Đang tải thông tin bản phát hành…</p>
+        </div>
+      </section>
+      <section class="features">
+        <article class="feature"><div class="feature-icon">⚡</div><h3>Tải nhanh</h3><p>Tải file cài đặt trực tiếp từ máy chủ GitHub Releases.</p></article>
+        <article class="feature"><div class="feature-icon">🔄</div><h3>Luôn cập nhật</h3><p>Trang tự kiểm tra release mới nhất để hiển thị phiên bản hiện tại.</p></article>
+        <article class="feature"><div class="feature-icon">🛡️</div><h3>Link chính chủ</h3><p>Liên kết tải dẫn tới file được phát hành trong repo PugbMini.</p></article>
+      </section>
+      <section class="install">
+        <h2>Cách cài đặt</h2>
+        <div class="steps">
+          <div class="step"><strong>01 — Tải game</strong>Nhấn nút Tải Game và chọn file phù hợp trong danh sách.</div>
+          <div class="step"><strong>02 — Giải nén / cài đặt</strong>Nếu tải ZIP, giải nén vào thư mục bạn muốn. Nếu là bộ cài, chạy file cài đặt.</div>
+          <div class="step"><strong>03 — Khởi chạy</strong>Mở file game theo hướng dẫn đi kèm gói phát hành.</div>
+        </div>
+      </section>
+    </main>
+    <footer><span>© PugbMini</span><span>Download hosted by GitHub Releases</span></footer>
+  </div>
+<script>
+(async function(){
+  const repo='MilysJkai/PugbMini';
+  const versionEl=document.getElementById('version');
+  const infoEl=document.getElementById('releaseInfo');
+  const statusEl=document.getElementById('status');
+  const mainBtn=document.getElementById('mainDownload');
+  const assetsEl=document.getElementById('assets');
+  const formatBytes=(n)=>{if(!n)return 'Không rõ dung lượng';const units=['B','KB','MB','GB'];let i=0;while(n>=1024&&i<units.length-1){n/=1024;i++;}return n.toFixed(i===0?0:1)+' '+units[i];};
+  try{
+    const res=await fetch(`https://api.github.com/repos/${repo}/releases/latest`,{headers:{'Accept':'application/vnd.github+json'}});
+    if(!res.ok)throw new Error('Không lấy được release mới nhất');
+    const release=await res.json();
+    versionEl.textContent=release.tag_name||release.name||'Bản mới nhất';
+    const date=release.published_at?new Date(release.published_at).toLocaleDateString('vi-VN'):'';
+    infoEl.textContent=`${date?`Ngày phát hành: ${date} · `:''}Tải từ GitHub`;
+    const assets=(release.assets||[]).filter(a=>!a.name.endsWith('.sha256'));
+    if(assets.length){
+      const first=assets[0];mainBtn.href=first.browser_download_url;mainBtn.setAttribute('download','');
+      if(assets.length>1){
+        assets.forEach((asset,i)=>{
+          const a=document.createElement('a');a.className='asset';a.href=asset.browser_download_url;
+          a.innerHTML=`<span class="asset-name">${i===0?'⬇ ':''}${asset.name.replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]))}</span><span class="asset-size">${formatBytes(asset.size)} ↗</span>`;
+          a.target='_blank';a.rel='noopener';assetsEl.appendChild(a);
+        });
+      }
+      statusEl.textContent=assets.length?`Có ${assets.length} file tải xuống · Bấm nút chính để tải file đầu tiên.`:'Release này chưa có file đính kèm. Mở GitHub Releases để xem chi tiết.';
+      if(!assets.length)mainBtn.href=release.html_url;
+    }else{
+      mainBtn.href=release.html_url;statusEl.textContent='Release chưa có file tải; mở trang phát hành để kiểm tra.';
+    }
+  }catch(e){
+    versionEl.textContent='PugbMini';infoEl.textContent='Tải phiên bản từ GitHub';
+    mainBtn.href=`https://github.com/${repo}/releases/latest`;
+    statusEl.textContent='Không tải được thông tin phiên bản tự động. Nút tải sẽ mở trang GitHub Releases.';
+  }
+})();
+</script>
+</body>
+</html>
