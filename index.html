@@ -4,8 +4,10 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PUBG Mini - Download</title>
-<meta name="description" content="Tải PUBG Mini phiên bản mới nhất.">
+<title>PUBG Mini | Download Game</title>
+<meta name="description" content="Tải PUBG Mini phiên bản mới nhất dành cho Windows.">
+<meta name="theme-color" content="#111510">
+
 <style>
 * {
     margin: 0;
@@ -13,18 +15,19 @@
     box-sizing: border-box;
 }
 
-body {
-    font-family: Arial, Helvetica, sans-serif;
-    background: #101211;
-    color: #f1f1f1;
-    min-height: 100vh;
+:root {
+    --bg: #101310;
+    --card: #191d19;
+    --border: #303630;
+    --accent: #d9a51d;
+    --text: #f2f3ef;
+    --muted: #a0a69e;
 }
 
-:root {
-    --orange: #f2a900;
-    --bg: #101211;
-    --card: #1b1e1c;
-    --muted: #a0a4a1;
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: var(--bg);
+    color: var(--text);
 }
 
 a {
@@ -38,127 +41,123 @@ a {
 }
 
 /* NAVBAR */
+
 nav {
-    height: 75px;
+    height: 76px;
     display: flex;
-    align-items: center;
     justify-content: space-between;
-    border-bottom: 1px solid #303330;
+    align-items: center;
+    border-bottom: 1px solid var(--border);
 }
 
 .logo {
-    font-size: 25px;
     font-weight: 900;
+    font-size: 25px;
     letter-spacing: 1px;
 }
 
 .logo span {
-    color: var(--orange);
+    color: var(--accent);
 }
 
-.nav-label {
+.nav-right {
     color: var(--muted);
     font-size: 13px;
 }
 
 /* HERO */
+
 .hero {
     min-height: 520px;
     display: flex;
     align-items: center;
-    padding: 70px 0;
     position: relative;
     overflow: hidden;
+    padding: 70px 0;
 }
 
 .hero::before {
     content: "";
     position: absolute;
-    right: -120px;
-    top: 20px;
-    width: 600px;
-    height: 600px;
-    background: radial-gradient(circle, #f2a90020, transparent 68%);
-    pointer-events: none;
+    right: -100px;
+    top: -100px;
+    width: 650px;
+    height: 650px;
+    background: radial-gradient(circle, #d9a51d18, transparent 70%);
 }
 
 .hero-content {
     position: relative;
-    z-index: 1;
-    max-width: 680px;
+    max-width: 700px;
 }
 
 .tag {
     display: inline-block;
-    padding: 8px 13px;
-    border: 1px solid #f2a90055;
-    color: var(--orange);
-    background: #f2a9000d;
-    border-radius: 4px;
+    color: var(--accent);
+    border: 1px solid #d9a51d55;
+    padding: 8px 14px;
     font-size: 12px;
     letter-spacing: 2px;
+    border-radius: 3px;
     margin-bottom: 24px;
 }
 
 .hero h1 {
-    font-size: clamp(48px, 8vw, 90px);
+    font-size: clamp(55px, 9vw, 100px);
     line-height: .95;
     font-weight: 900;
-    letter-spacing: -3px;
+    letter-spacing: -4px;
 }
 
 .hero h1 span {
-    color: var(--orange);
+    color: var(--accent);
 }
 
 .hero p {
     color: var(--muted);
     line-height: 1.8;
-    margin-top: 24px;
-    max-width: 520px;
-    font-size: 16px;
+    max-width: 530px;
+    margin-top: 25px;
 }
 
 .buttons {
     display: flex;
-    gap: 12px;
-    margin-top: 32px;
     flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 30px;
 }
 
 .btn {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    gap: 10px;
-    padding: 16px 25px;
-    font-weight: bold;
+    padding: 15px 24px;
     border-radius: 5px;
+    font-weight: bold;
     transition: .2s;
     cursor: pointer;
-    border: 1px solid transparent;
 }
 
 .btn-primary {
-    background: var(--orange);
+    background: var(--accent);
     color: #111;
 }
 
 .btn-primary:hover {
-    background: #ffc62e;
+    background: #edbd39;
     transform: translateY(-2px);
 }
 
 .btn-secondary {
-    border-color: #414541;
-    color: white;
+    border: 1px solid var(--border);
 }
 
 .btn-secondary:hover {
-    background: #242724;
+    background: #252a25;
 }
 
-/* INFO */
+/* INFORMATION */
+
 .info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -168,8 +167,8 @@ nav {
 
 .info-card {
     background: var(--card);
-    border: 1px solid #2b2e2c;
-    padding: 23px;
+    border: 1px solid var(--border);
+    padding: 22px;
     border-radius: 8px;
 }
 
@@ -185,8 +184,9 @@ nav {
 }
 
 /* DOWNLOAD */
+
 .section {
-    padding: 35px 0 70px;
+    padding: 30px 0 70px;
 }
 
 .section-title {
@@ -197,65 +197,66 @@ nav {
 .section-desc {
     color: var(--muted);
     margin-bottom: 25px;
+    line-height: 1.7;
 }
 
 .download-box {
     background: var(--card);
-    border: 1px solid #343734;
+    border: 1px solid var(--border);
     border-radius: 10px;
     padding: 25px;
 }
 
 .release-title {
-    font-size: 20px;
-    margin-bottom: 8px;
+    font-size: 21px;
+    margin-bottom: 10px;
 }
 
 .release-notes {
     color: var(--muted);
+    line-height: 1.8;
     white-space: pre-wrap;
     margin: 15px 0;
-    line-height: 1.7;
-    font-size: 14px;
 }
 
 .asset {
+    border-top: 1px solid var(--border);
+    padding: 18px 0;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
     gap: 15px;
-    border-top: 1px solid #343734;
-    padding: 17px 0;
     flex-wrap: wrap;
 }
 
 .asset-name {
     font-weight: bold;
-    word-break: break-all;
+    word-break: break-word;
 }
 
 .asset-size {
-    color: var(--muted);
     font-size: 13px;
-    margin-top: 6px;
+    color: var(--muted);
+    margin-top: 7px;
 }
 
 .asset .btn {
-    padding: 11px 18px;
+    padding: 11px 17px;
     font-size: 13px;
 }
 
 .status {
     color: var(--muted);
     padding: 20px 0;
-    font-size: 14px;
+    line-height: 1.8;
 }
 
 .error {
-    color: #ff7373;
+    color: #ff7777;
 }
 
-/* INSTALL */
+/* INSTALL GUIDE */
+
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -264,15 +265,15 @@ nav {
 
 .step {
     background: var(--card);
-    border: 1px solid #2b2e2c;
+    border: 1px solid var(--border);
     border-radius: 8px;
     padding: 25px;
 }
 
 .step-number {
-    color: var(--orange);
     font-size: 28px;
     font-weight: 900;
+    color: var(--accent);
     margin-bottom: 18px;
 }
 
@@ -282,22 +283,26 @@ nav {
 
 .step p {
     color: var(--muted);
-    line-height: 1.7;
     font-size: 14px;
+    line-height: 1.8;
 }
 
 /* FOOTER */
+
 footer {
-    border-top: 1px solid #303330;
+    border-top: 1px solid var(--border);
     padding: 25px 0;
+    text-align: center;
     color: var(--muted);
     font-size: 13px;
-    text-align: center;
 }
 
-footer strong {
-    color: var(--orange);
+footer span {
+    color: var(--accent);
+    font-weight: bold;
 }
+
+/* RESPONSIVE */
 
 @media (max-width: 700px) {
     .hero {
@@ -305,15 +310,16 @@ footer strong {
         padding: 65px 0;
     }
 
-    .info-grid, .steps {
-        grid-template-columns: 1fr;
-    }
-
     .hero h1 {
         letter-spacing: -2px;
     }
 
-    .nav-label {
+    .info-grid,
+    .steps {
+        grid-template-columns: 1fr;
+    }
+
+    .nav-right {
         display: none;
     }
 
@@ -323,6 +329,7 @@ footer strong {
 }
 </style>
 </head>
+
 <body>
 
 <div class="container">
@@ -330,20 +337,20 @@ footer strong {
     <!-- NAVBAR -->
     <nav>
         <div class="logo">PUBG <span>MINI</span></div>
-        <div class="nav-label">OFFICIAL GAME DOWNLOAD</div>
+        <div class="nav-right">GAME DOWNLOAD</div>
     </nav>
 
     <!-- HERO -->
     <section class="hero">
         <div class="hero-content">
+
             <div class="tag">PC GAME · WINDOWS</div>
 
             <h1>PUBG<br><span>MINI</span></h1>
 
             <p>
-                Tải game PUBG Mini tại đây.
-                Tải phiên bản mới nhất trực tiếp từ hệ thống phát hành
-                và bắt đầu trải nghiệm.
+                Tải PUBG Mini về máy tính và bắt đầu trải nghiệm.
+                File game được cung cấp trực tiếp từ GitHub Releases.
             </p>
 
             <div class="buttons">
@@ -351,8 +358,11 @@ footer strong {
                     ↓ DOWNLOAD GAME
                 </a>
 
-                <a href="https://github.com/MilysJkai/PugbMini/releases"
-                   target="_blank" class="btn btn-secondary">
+                <a
+                    href="https://github.com/MilysJkai/PugbMini/releases"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="btn btn-secondary">
                     VIEW RELEASES ↗
                 </a>
             </div>
@@ -361,9 +371,10 @@ footer strong {
 
     <!-- GAME INFO -->
     <div class="info-grid">
+
         <div class="info-card">
             <small>VERSION</small>
-            <strong id="version">Đang tải...</strong>
+            <strong id="version">Loading...</strong>
         </div>
 
         <div class="info-card">
@@ -372,70 +383,100 @@ footer strong {
         </div>
 
         <div class="info-card">
-            <small>FILE SIZE</small>
-            <strong id="totalSize">Đang kiểm tra...</strong>
+            <small>DOWNLOAD SIZE</small>
+            <strong id="totalSize">Loading...</strong>
         </div>
+
     </div>
 
-    <!-- DOWNLOAD SECTION -->
+    <!-- DOWNLOAD -->
     <section class="section" id="download">
+
         <h2 class="section-title">Download Game</h2>
+
         <p class="section-desc">
-            Chọn file game bên dưới để tải về máy.
+            Chọn file bên dưới để tải phiên bản mới nhất.
         </p>
 
         <div class="download-box">
+
             <h3 class="release-title" id="releaseTitle">
-                PUBG Mini - Latest Release
+                PUBG Mini
             </h3>
 
-            <div id="releaseNotes" class="release-notes"></div>
+            <div class="release-notes" id="releaseNotes"></div>
 
             <div id="downloadList">
-                <div class="status">Đang tải thông tin phiên bản...</div>
+                <div class="status">
+                    Đang tải thông tin phiên bản...
+                </div>
             </div>
+
         </div>
     </section>
 
     <!-- INSTALL GUIDE -->
     <section class="section">
+
         <h2 class="section-title">How to install</h2>
-        <p class="section-desc">Cài đặt game chỉ với 3 bước.</p>
+
+        <p class="section-desc">
+            Cài đặt game với 3 bước đơn giản.
+        </p>
 
         <div class="steps">
+
             <div class="step">
                 <div class="step-number">01</div>
-                <h3>Tải Game</h3>
-                <p>Nhấn nút Download và tải file game về máy tính.</p>
+                <h3>Tải game</h3>
+                <p>
+                    Nhấn Download và tải file game về máy.
+                </p>
             </div>
 
             <div class="step">
                 <div class="step-number">02</div>
                 <h3>Giải nén</h3>
-                <p>Nếu file tải về là ZIP hoặc RAR, hãy giải nén nó.</p>
+                <p>
+                    Nếu file ở dạng ZIP, hãy giải nén trước khi chạy.
+                </p>
             </div>
 
             <div class="step">
                 <div class="step-number">03</div>
                 <h3>Khởi chạy</h3>
-                <p>Mở thư mục game và chạy file khởi động của trò chơi.</p>
+                <p>
+                    Mở thư mục game và chạy file khởi động.
+                </p>
             </div>
+
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer>
-        © 2026 <strong>PUBG MINI</strong> · Game Download Page
+        © 2026 <span>PUBG MINI</span> · Game Download
     </footer>
 
 </div>
 
 <script>
-const API_URL =
-    "https://api.github.com/repos/MilysJkai/PugbMini/releases/latest";
+/*
+    Repository URL giữ nguyên theo repo hiện tại.
+    Tên hiển thị trên website là PUBG Mini.
+*/
+
+const OWNER = "MilysJkai";
+const REPO = "PugbMini";
+
+const RELEASES_API =
+    `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
+
+const RELEASES_PAGE =
+    `https://github.com/${OWNER}/${REPO}/releases`;
 
 function formatSize(bytes) {
-    if (!bytes) return "Không rõ";
+    if (!bytes || bytes <= 0) return "Unknown";
 
     if (bytes < 1024 * 1024) {
         return (bytes / 1024).toFixed(1) + " KB";
@@ -452,72 +493,137 @@ async function loadRelease() {
     const sizeEl = document.getElementById("totalSize");
 
     try {
-        const response = await fetch(API_URL);
+        /*
+          Lấy danh sách releases thay vì endpoint /latest
+          để tránh lỗi 404 khi latest chưa được nhận diện.
+        */
+        const response = await fetch(RELEASES_API);
 
         if (!response.ok) {
-            throw new Error("Không thể lấy thông tin Release.");
+            throw new Error("GitHub API error: " + response.status);
         }
 
-        const release = await response.json();
+        const releases = await response.json();
+
+        if (!Array.isArray(releases) || releases.length === 0) {
+            versionEl.textContent = "No release";
+            sizeEl.textContent = "Unavailable";
+
+            listEl.innerHTML = `
+                <div class="status">
+                    Chưa tìm thấy Release nào.
+                    <br><br>
+                    <a class="btn btn-primary"
+                       href="${RELEASES_PAGE}"
+                       target="_blank"
+                       rel="noopener noreferrer">
+                       OPEN GITHUB RELEASES ↗
+                    </a>
+                </div>
+            `;
+            return;
+        }
+
+        // Ưu tiên release mới nhất đã publish, bỏ draft
+        const release = releases
+            .filter(item => !item.draft)
+            .sort((a, b) =>
+                new Date(b.published_at || b.created_at) -
+                new Date(a.published_at || a.created_at)
+            )[0];
+
+        if (!release) {
+            throw new Error("No published release.");
+        }
+
         const assets = release.assets || [];
 
         versionEl.textContent = release.tag_name || "Latest";
-        titleEl.textContent = release.name || release.tag_name || "PUBG Mini";
-        notesEl.textContent = release.body || "Phiên bản game mới nhất.";
+        titleEl.textContent = release.name || "PUBG Mini";
 
+        notesEl.textContent =
+            release.body || "PUBG Mini latest release.";
+
+        // Không có file đính kèm
         if (assets.length === 0) {
-            sizeEl.textContent = "Chưa có file";
+            sizeEl.textContent = "No files";
+
             listEl.innerHTML = `
                 <div class="status">
-                    Release chưa có file game đính kèm.
+                    Release này chưa có file game đính kèm.
                     <br><br>
                     <a class="btn btn-primary"
                        href="${release.html_url}"
-                       target="_blank">
-                       Mở Release trên GitHub ↗
+                       target="_blank"
+                       rel="noopener noreferrer">
+                       VIEW RELEASE ↗
                     </a>
-                </div>`;
+                </div>
+            `;
             return;
         }
 
         const totalBytes = assets.reduce(
-            (sum, asset) => sum + asset.size, 0
+            (total, asset) => total + (asset.size || 0),
+            0
         );
 
         sizeEl.textContent = formatSize(totalBytes);
 
-        listEl.innerHTML = assets.map(asset => `
-            <div class="asset">
-                <div>
-                    <div class="asset-name">📦 ${asset.name}</div>
-                    <div class="asset-size">
-                        ${formatSize(asset.size)}
-                        · ${asset.download_count} lượt tải
-                    </div>
-                </div>
+        // Hiển thị từng file tải thực tế từ Release
+        listEl.innerHTML = "";
 
-                <a class="btn btn-primary"
-                   href="${asset.browser_download_url}">
-                   DOWNLOAD ↓
-                </a>
-            </div>
-        `).join("");
+        assets.forEach(asset => {
+            const item = document.createElement("div");
+            item.className = "asset";
+
+            const info = document.createElement("div");
+
+            const name = document.createElement("div");
+            name.className = "asset-name";
+            name.textContent = "📦 " + asset.name;
+
+            const size = document.createElement("div");
+            size.className = "asset-size";
+            size.textContent =
+                formatSize(asset.size) +
+                " · " + (asset.download_count || 0) +
+                " downloads";
+
+            info.appendChild(name);
+            info.appendChild(size);
+
+            const link = document.createElement("a");
+            link.className = "btn btn-primary";
+            link.textContent = "DOWNLOAD ↓";
+            link.href = asset.browser_download_url;
+
+            item.appendChild(info);
+            item.appendChild(link);
+
+            listEl.appendChild(item);
+        });
 
     } catch (error) {
-        versionEl.textContent = "Không khả dụng";
-        sizeEl.textContent = "Không khả dụng";
+        console.error(error);
+
+        versionEl.textContent = "Unavailable";
+        sizeEl.textContent = "Unavailable";
 
         listEl.innerHTML = `
             <div class="status error">
-                Không tải được dữ liệu Release.
-                <br>Hãy thử truy cập GitHub trực tiếp:
+                Không thể tải dữ liệu Release từ GitHub.
+                <br><br>
+                Bạn vẫn có thể tải game tại trang Releases:
                 <br><br>
                 <a class="btn btn-primary"
-                   href="https://github.com/MilysJkai/PugbMini/releases"
-                   target="_blank">
-                   DOWNLOAD FROM GITHUB ↗
+                   href="${RELEASES_PAGE}"
+                   target="_blank"
+                   rel="noopener noreferrer">
+                   OPEN GITHUB RELEASES ↗
                 </a>
-            </div>`;
+            </div>
+        `;
     }
 }
 
