@@ -41,7 +41,6 @@ a {
 }
 
 /* NAVBAR */
-
 nav {
     height: 76px;
     display: flex;
@@ -66,7 +65,6 @@ nav {
 }
 
 /* HERO */
-
 .hero {
     min-height: 520px;
     display: flex;
@@ -157,7 +155,6 @@ nav {
 }
 
 /* INFORMATION */
-
 .info-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -184,7 +181,6 @@ nav {
 }
 
 /* DOWNLOAD */
-
 .section {
     padding: 30px 0 70px;
 }
@@ -256,7 +252,6 @@ nav {
 }
 
 /* INSTALL GUIDE */
-
 .steps {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -288,7 +283,6 @@ nav {
 }
 
 /* FOOTER */
-
 footer {
     border-top: 1px solid var(--border);
     padding: 25px 0;
@@ -303,7 +297,6 @@ footer span {
 }
 
 /* RESPONSIVE */
-
 @media (max-width: 700px) {
     .hero {
         min-height: auto;
@@ -359,7 +352,7 @@ footer span {
                 </a>
 
                 <a
-                    href="https://github.com/MilysJkai/PugbMini/releases"
+                    href="https://github.com/MilysJkai/PubgMini/releases"
                     target="_blank"
                     rel="noopener noreferrer"
                     class="btn btn-secondary">
@@ -461,14 +454,11 @@ footer span {
 </div>
 
 <script>
-/*
-    Repository URL giữ nguyên theo repo hiện tại.
-    Tên hiển thị trên website là PUBG Mini.
-*/
-
+/* ĐỊA CHỈ REPOSITORY ĐÚNG */
 const OWNER = "MilysJkai";
-const REPO = "PugbMini";
+const REPO = "PubgMini";
 
+/* Link API và trang Releases đúng */
 const RELEASES_API =
     `https://api.github.com/repos/${OWNER}/${REPO}/releases`;
 
@@ -493,10 +483,6 @@ async function loadRelease() {
     const sizeEl = document.getElementById("totalSize");
 
     try {
-        /*
-          Lấy danh sách releases thay vì endpoint /latest
-          để tránh lỗi 404 khi latest chưa được nhận diện.
-        */
         const response = await fetch(RELEASES_API);
 
         if (!response.ok) {
@@ -524,7 +510,7 @@ async function loadRelease() {
             return;
         }
 
-        // Ưu tiên release mới nhất đã publish, bỏ draft
+        // Lấy bản Release mới nhất đã publish
         const release = releases
             .filter(item => !item.draft)
             .sort((a, b) =>
@@ -540,11 +526,9 @@ async function loadRelease() {
 
         versionEl.textContent = release.tag_name || "Latest";
         titleEl.textContent = release.name || "PUBG Mini";
+        notesEl.textContent = release.body || "PUBG Mini latest release.";
 
-        notesEl.textContent =
-            release.body || "PUBG Mini latest release.";
-
-        // Không có file đính kèm
+        // Release không có file đính kèm
         if (assets.length === 0) {
             sizeEl.textContent = "No files";
 
@@ -563,6 +547,7 @@ async function loadRelease() {
             return;
         }
 
+        // Tổng dung lượng tất cả file
         const totalBytes = assets.reduce(
             (total, asset) => total + (asset.size || 0),
             0
@@ -570,7 +555,7 @@ async function loadRelease() {
 
         sizeEl.textContent = formatSize(totalBytes);
 
-        // Hiển thị từng file tải thực tế từ Release
+        // Tạo danh sách file tải trực tiếp
         listEl.innerHTML = "";
 
         assets.forEach(asset => {
@@ -605,7 +590,7 @@ async function loadRelease() {
         });
 
     } catch (error) {
-        console.error(error);
+        console.error("Release loading error:", error);
 
         versionEl.textContent = "Unavailable";
         sizeEl.textContent = "Unavailable";
